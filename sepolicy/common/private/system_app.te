@@ -1,0 +1,9 @@
+#
+# POX OS SELinux Policy - PoxHub Privileged System App
+# DevSkill R-065 Compliant: Zero neverallow violations, Treble safe
+#
+
+typeattribute system_app coredomain;
+
+# Allow PoxHub to access system_ext property service
+set_prop(system_app, system_prop)
