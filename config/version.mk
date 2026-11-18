@@ -1,5 +1,5 @@
 #
-# POX OS Versioning Specification
+# POX OS Versioning Specification (Pure AOSP)
 #
 
 POX_BUILD_DATE := $(shell date -u +%Y%m%d)
@@ -7,9 +7,10 @@ POX_BUILD_TYPE ?= OFFICIAL
 POX_VERSION_MAJOR := 15.0
 POX_VERSION_CODENAME := Genesis
 
-POX_VERSION := POX-$(POX_VERSION_MAJOR)-$(POX_VERSION_CODENAME)-$(POX_BUILD_TYPE)-$(POX_BUILD_DATE)
+POX_VERSION := POX-AOSP-$(POX_VERSION_MAJOR)-$(POX_VERSION_CODENAME)-$(POX_BUILD_TYPE)-$(POX_BUILD_DATE)
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.pox.version=$(POX_VERSION) \
+    ro.pox.base=AOSP \
     ro.pox.build.type=$(POX_BUILD_TYPE) \
     ro.pox.codename=$(POX_VERSION_CODENAME)
