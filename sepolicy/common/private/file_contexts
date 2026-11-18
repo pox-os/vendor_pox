@@ -1,0 +1,4 @@
+#
+# POX OS File Contexts
+#
+/(system_ext|system/system_ext)/priv-app/PoxHub(/.*)?   u:object_r:system_file:s0
